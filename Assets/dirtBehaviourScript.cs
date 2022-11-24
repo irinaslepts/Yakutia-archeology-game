@@ -19,6 +19,7 @@ public class dirtBehaviourScript : MonoBehaviour
     }
     void OnMouseDown()
     {
+        print("- dirt");
         Destroy(stone);
     }
 
