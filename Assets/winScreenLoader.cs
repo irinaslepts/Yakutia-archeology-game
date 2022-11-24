@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class winScreenLoader : MonoBehaviour
 {
     public GameObject winScreen;
-
+    public int dirtLeft = 5;
     // Start is called before the first frame update
     void Start()
     {

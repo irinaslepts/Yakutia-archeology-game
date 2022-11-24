@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//using static winScreenLoader;
 public class dirtBehaviourScript : MonoBehaviour
 {
     public GameObject stone;
@@ -20,6 +20,7 @@ public class dirtBehaviourScript : MonoBehaviour
     void OnMouseDown()
     {
         print("- dirt");
+        //winScreenLoader.dirtLeft--;
         Destroy(stone);
     }
 
