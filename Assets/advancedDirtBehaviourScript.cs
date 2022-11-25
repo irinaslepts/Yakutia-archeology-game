@@ -8,6 +8,7 @@ public class advancedDirtBehaviourScript : MonoBehaviour
     public GameObject stone;
     public GameObject valueSaver;
     private SavedValues savedValues;
+    public AudioSource sfx;
     // Start is called before the first frame update
     public void setValues()
     {
@@ -25,6 +26,7 @@ public class advancedDirtBehaviourScript : MonoBehaviour
         if (savedValues.pickaxeOwned == true)
         {    
             print("- dirt");
+            sfx.Play();
             //winScreenLoader.dirtLeft--;
             Destroy(stone);
         }

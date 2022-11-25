@@ -5,6 +5,7 @@ using UnityEngine;
 public class pickaxeReveal : MonoBehaviour
 {
     public GameObject pickaxeGiver;
+    public GameObject shovelGiver;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,10 @@ public class pickaxeReveal : MonoBehaviour
             if (PlayerPrefs.GetInt("levels_completed") == 1)
             {
                 pickaxeGiver.SetActive(true);
+            }
+            else if (PlayerPrefs.GetInt("levels_completed") == 2)
+            {
+                shovelGiver.SetActive(true);
             }
         }
     }

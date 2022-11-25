@@ -12,6 +12,10 @@ public class diamondCounterScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!PlayerPrefs.HasKey("timer"))
+        {
+            PlayerPrefs.SetFloat("timer", 10*60*1000);
+        }
         diamonds = PlayerPrefs.GetInt("diamonds");
     }
 

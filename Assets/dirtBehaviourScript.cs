@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class dirtBehaviourScript : MonoBehaviour
 {
     public GameObject stone;
+    public AudioSource sfx;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class dirtBehaviourScript : MonoBehaviour
     void OnMouseDown()
     {
         print("- dirt");
+        sfx.Play();
         //winScreenLoader.dirtLeft--;
         Destroy(stone);
     }
