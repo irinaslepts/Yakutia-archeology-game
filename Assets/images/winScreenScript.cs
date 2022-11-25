@@ -1,11 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public class btn1 : MonoBehaviour
+public class winScreenScript : MonoBehaviour
 {
-    public string level;
+    public int curLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +16,10 @@ public class btn1 : MonoBehaviour
     {
         
     }
-
-
-    void OnMouseDown(){
-        SceneManager.LoadScene(level);
-        
+    void OnMouseDown()
+    {
+        PlayerPrefs.SetInt("levels_completed", curLevel);
+        SceneManager.LoadScene("MainScene");
         
     }
-
 }
