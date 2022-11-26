@@ -6,6 +6,7 @@ using TMPro;
 public class diamondCounterScript : MonoBehaviour
 {
     public TextMeshProUGUI txt;
+    public GameObject tutorial;
     int diamonds;
     
     
@@ -14,7 +15,11 @@ public class diamondCounterScript : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("timer"))
         {
-            PlayerPrefs.SetFloat("timer", 10*60*1000);
+            PlayerPrefs.SetFloat("timer", 3*60*1000);
+        }
+        if (PlayerPrefs.GetInt("tutorialCompleted") == 0)
+        {
+            tutorial.SetActive(true);
         }
         diamonds = PlayerPrefs.GetInt("diamonds");
     }
